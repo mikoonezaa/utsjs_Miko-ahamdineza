@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <h1>UTS JAVASCRIPT</h1>
+    <h3>nama: miko ahamadineza</h3>
+    <h3>kelas: X RPL</h3>
+    <button id="btn1" onclick="klik1()" ondblclick="klik2()">clickme</button>
+    <button class="btn2" onclick ="mouseIn()"onmouseout="mouseout()">mouse in & out</button>
+    <button id="btn-remove"onclick="klik3()">remove button</button>
+
+    <script>
+      const body = document.body;
+      const btn1 = document.getElementById("btn1");
+      const btn2 = document.querySelector("btn2");
+
+      const newText = document.createElement("h1");
+      newText.textContent = "Berhasil !!";
+
+      const newText1 = document.createElement("h1");
+      newText1.textContent =  "X Rpl";
+
+
+      function klik1() {
+        body.append(newText);
+      }
+      function klik2() {
+        body.append(alert("tombol ini di klik 2 kali"));
+      }
+
+      function mouseIn() {
+        body.append(newText1);
+        newText1.style.color = "red"
+      }
+      function mouseout() {
+        newText1.style.color = "green"
+      }
+      function klik3() {
+        body.remove('body');
+      }
+    </script>
+</body>
+
+</html>
+
+
